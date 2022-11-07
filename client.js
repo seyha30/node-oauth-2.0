@@ -1,9 +1,10 @@
 var express = require('express')
 var cons = require('consolidate')
 var app = express()
-app.engine('html', cons.underscore)
-app.engine('view engine', 'html')
-app.engine('views','files/client')
+app.engine('html', cons.underscore);
+app.set('view engine', 'html');
+app.set('views', 'files/client');
+
 var access_token = null
 var refresh_token = null
 var scope = null
